@@ -112,7 +112,7 @@ function log(count, seq, rnd1, rnd2, rnd3) {
    var NoteCount = Math.floor(Math.random() * 10) + 1; // 1 to 10 Notes
 
    tmp = date + "\n" +
-         rnd1 + "," + NoteCount + "," + rnd2 + "," + rnd3 + "," + rnd4 + "," + rnd5 + "," + rnd6 + "," + rnd7 + " " +
+         rnd1 + "," + rnd2 + "," + rnd3 + "," + rnd4 + "," + rnd5 + "," + rnd6 + "," + rnd7 + " " +
 "\n";
 
    console.log("Line " + count + ": " + tmp.substr(0,tmp.length - 1));

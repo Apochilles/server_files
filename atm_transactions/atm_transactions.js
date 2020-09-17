@@ -46,6 +46,8 @@ else
 
 try { TransactionDate = process.env.TransactionDate.toString().split("," ); }
 catch { random1 = []; }
+try { CustomerID = process.env.CustomerID.toString().split("," ); }
+catch { random2 = []; }
 try { TransactionType = process.env.TransactionType.toString().split("," ); }
 catch { random2 = []; }
 try { ipAddress = process.env.ipAddress.toString().split("," ); }
@@ -66,6 +68,7 @@ console.log('logCount = ' + logCount);
 console.log('logDelay = ' + logDelay);
 console.log('last seq = ' + seq);
 console.log('TransactionDate = '  + TransactionDate); 
+console.log('CustomerID = '  + CustomerID); 
 console.log('TransactionType = '  + TransactionType); 
 console.log('ipAddress = '  + ipAddress); 
 console.log('AccountType = '  + AccountType); 
@@ -82,20 +85,22 @@ console.log('logging ...' + "\n");
 
       idx = Math.floor(Math.random() * TransactionDate.length);
       rnd1 = TransactionDate[idx];
+      idx = Math.floor(Math.random() * CustomerID.length);
+      rnd2 = CustomerID[idx];
       idx = Math.floor(Math.random() * TransactionType.length);
-      rnd2 = TransactionType[idx];
+      rnd3 = TransactionType[idx];
       idx = Math.floor(Math.random() * ipAddress.length);
-      rnd3 = ipAddress[idx];
+      rnd4 = ipAddress[idx];
       idx = Math.floor(Math.random() * AccountType.length);
-      rnd4 = AccountType[idx];
+      rnd5 = AccountType[idx];
       idx = Math.floor(Math.random() * Description.length);
-      rnd5= Description[idx];
+      rnd6= Description[idx];
       idx = Math.floor(Math.random() * Amountpve.length);
-      rnd6 = Amountpve[idx];
+      rnd7 = Amountpve[idx];
       idx = Math.floor(Math.random() * Amountmve.length);
-      rnd7 = Amountmve[idx];
+      rnd8 = Amountmve[idx];
 
-      log(logCount - i + 1, seq, rnd1, rnd2, rnd3, rnd4, rnd5, rnd6, rnd7);
+      log(logCount - i + 1, seq, rnd1, rnd2, rnd3, rnd4, rnd5, rnd6, rnd7, rnd8);
  if (seq != 0)
     seq++ ;  
 
@@ -112,7 +117,7 @@ function log(count, seq, rnd1, rnd2, rnd3) {
    var NoteCount = Math.floor(Math.random() * 10) + 1; // 1 to 10 Notes
 
    tmp = date + "\n" +
-         rnd1 + "," + NoteCount + "," + rnd2 + "," + rnd3 + "," + rnd4 + "," + rnd5 + "," + rnd6 + "," + rnd7 + " " +
+         rnd1 + "," + rnd2 + "," + rnd3 + "," + rnd4 + "," + rnd5 + "," + rnd6 + "," + rnd7 +  "," + rnd8 + " " +
 "\n";
 
    console.log("Line " + count + ": " + tmp.substr(0,tmp.length - 1));
