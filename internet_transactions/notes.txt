@@ -1,0 +1,6 @@
+logName=log.log
+logCount=3
+logDelay=2000
+random1=F2505,F2506,F2509,F3505
+random2=5,10,20,100
+sequence=4000

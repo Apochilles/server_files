@@ -1,0 +1,19 @@
+{
+  "name": "logger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luke Dawson",
+  "license": "ISC",
+  "dependencies": {
+    "conf": "^6.2.4",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security",
+    "moment": "^2.27.0",
+    "winston": "^3.2.0"
+  }
+}
